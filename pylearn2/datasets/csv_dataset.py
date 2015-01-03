@@ -139,7 +139,7 @@ class CSVDataset(DenseDesignMatrix):
             return X, y
         
         if self.expect_labels:
-            y = data[:,0]
+            y = data[:,0:1]
             X = data[:,1:]
             
             # get unique labels and map them to one-hot positions
